@@ -149,7 +149,7 @@ section:not(.dark):not(.fin) h2{color:#FBE7B8;font-size:clamp(32px,6vw,50px)}
 section:not(.dark):not(.fin) .kick{color:var(--gold)}
 section[style*="#fff"]{background:#F6EBD3!important;border:0!important}
 section[style*="#fff"] h2{color:#5a1d0a!important}
-section:not(.dark)>.n>p,section:not(.dark) .ctr>p{color:#e3d6bf}
+section:not(.dark):not(.gar)>.n>p,section:not(.dark):not(.gar) .ctr>p{color:#e3d6bf}
 .bul li,.step,.faq details,details{background:#FFF8E1!important;color:#2a1a10!important;border:2px dashed #7a1f2b!important}
 .bul li *,.step *,details *{color:inherit}
 .step h3{color:#5a1d0a!important}
@@ -164,6 +164,20 @@ section:not(.dark)>.n>p,section:not(.dark) .ctr>p{color:#e3d6bf}
 .bx h3{font-size:clamp(20px,4.6vw,26px);color:#5a1d0a;margin-bottom:10px}.bx p{color:#4a3a30;font-size:16.5px}
 .bx ul{list-style:none;padding:0;margin:14px auto 0;max-width:30em;text-align:left;display:grid;gap:8px;font-size:15.5px}
 .bx li{padding-left:26px;position:relative}.bx li::before{content:"✓";position:absolute;left:0;color:#1F4E4A;font-weight:800}
+.gbox{max-width:760px;margin:0 auto;background:#ecfdf5;color:#1f2937;border:3px solid #2dbb5d;padding:26px 20px 30px;text-align:center}
+.gbox .kitc{max-width:560px;border-radius:0}
+.gl{list-style:none;text-align:left;max-width:30em;margin:22px auto 6px;padding:0;display:grid;gap:9px;font-size:16.5px}
+.gl li{padding-left:28px;position:relative}.gl li::before{content:"✓";position:absolute;left:0;color:#0a8f3a;font-weight:800}
+.pp{margin:22px 0 20px;display:grid;gap:4px}
+.po{font:700 20px Georgia,serif;color:#5a1d0a}.pv{font:700 clamp(54px,12vw,76px)/1.05 Georgia,serif;color:#0a9a2e}
+.pa{font:700 17px Georgia,serif;color:#1f2937}.pi{font:700 15px Georgia,serif;color:#1f2937}.pi:empty{display:none}
+.gbtn{display:inline-block;background:#2dbb5d;color:#fff;text-decoration:none;font:800 clamp(16px,4.4vw,21px) system-ui,sans-serif;padding:17px 30px;border-radius:12px;box-shadow:0 8px 20px rgba(45,187,93,.35);animation:pu 2s infinite}
+.gbtn.sm{padding:13px 28px;font-size:18px;animation:none}.gbtn:hover{filter:brightness(1.07)}
+@keyframes pu{50%{transform:scale(1.035)}}
+.gn{margin:14px 0 0;color:#6b7280;font-size:17px}
+.gar{background:#f3f3f3;color:#111;padding:54px 0}
+.sealimg2{display:block;width:210px;max-width:60%;height:auto;margin:0 auto 18px;border-radius:50%}
+.gar h3{font:800 clamp(26px,6vw,36px) system-ui,sans-serif;color:#000;margin-bottom:12px}.gar p{color:#222!important;font-size:17px;max-width:34em;margin:0 auto 22px}
 </style></head><body>
 
 <div class="strip">Acesso imediato · Garantia incondicional de 7 dias</div>
@@ -245,16 +259,15 @@ section:not(.dark)>.n>p,section:not(.dark) .ctr>p{color:#e3d6bf}
 <p>O guia se apoia em estudos reais, como o efeito holofote (Gilovich, 2000), o "liking gap" (Boothby, 2018) e o efeito de fazer perguntas de acompanhamento (Huang, 2017). Cada técnica diz o quanto de apoio tem, e as referências estão no final do material.</p>
 <p>Isso não é terapia e não garante resultado. Os efeitos variam de pessoa pra pessoa e dependem de você praticar.</p></div></section>
 
-<section id="oferta" class="dark"><div class="w"><div class="ctr"><div class="kick">Sua oferta</div><h2>Tudo isso por um pagamento único</h2></div>
+<section id="oferta" class="dark"><div class="w"><div class="ctr"><div class="kick">Sua oferta</div><h2>Kit completo, em um pagamento único</h2></div>
 <div class="cd" id="cd"><b>Condição de lançamento termina em:<span class="t" id="cdt"></span></b><span id="cdd"></span></div>
-<div class="offer"><img class="kitc" src="kit-completo.jpg" width="1000" height="714" loading="lazy" alt="Kit completo: guia com 105 dinâmicas e 3 bônus"><div class="kick" style="margin-top:18px">Kit completo</div>
-<h3 style="font-size:26px;color:var(--v1)">Mais de 100 Dinâmicas Sociais</h3>
-<div class="pr"><small>R$</small>27</div><div class="note">pagamento único, sem mensalidade</div>
-<ul><li>Guia com 105 dinâmicas em 14 partes (PDF)</li><li>Plano de 30 dias dentro do guia</li><li>Bônus 1: Como Responder Sem Travar</li><li>Bônus 2: Checklist de Sinais</li><li>Bônus 3: Script de Frases</li><li>Acesso imediato, pra uso pessoal</li></ul>
-<a class="btn block" href="#" data-buy>Quero começar agora</a>
-<p class="note" style="margin:14px 0 0">Compra segura. Se não gostar, peça o reembolso em até 7 dias.</p></div></div></section>
+<div class="gbox"><img class="kitc" src="kit-completo.jpg" width="1000" height="714" loading="lazy" alt="Kit completo: guia com 105 dinâmicas e 3 bônus">
+<ul class="gl"><li>Guia com 105 dinâmicas em 14 partes (PDF)</li><li>Plano de 30 dias dentro do guia</li><li>Bônus 1: Como Responder Sem Travar</li><li>Bônus 2: Checklist de Sinais</li><li>Bônus 3: Script de Frases</li></ul>
+<div class="pp"><span class="po">Por apenas</span><span class="pv">R$ 27</span><span class="pa">pagamento único, sem mensalidade</span><span class="pi" id="inst"></span></div>
+<a class="gbtn" href="#" data-buy>CLIQUE AQUI E BAIXE AGORA</a>
+<p class="gn">Acesso imediato. 7 dias de garantia.</p></div></div></section>
 
-<section><div class="w"><div class="guar"><img class="sealimg" src="selo.jpg" width="400" height="400" loading="lazy" alt="Selo de garantia incondicional de 7 dias"><div><h3 style="font-size:24px;color:var(--v1);margin-bottom:6px">Garantia incondicional de 7 dias</h3><p style="margin:0">Leia, teste e siga o plano. Se dentro de 7 dias você sentir que não valeu, é só pedir o reembolso e devolvemos o valor.</p></div></div></div></section>
+<section class="gar"><div class="n ctr"><img class="sealimg2" src="selo.jpg" width="400" height="400" loading="lazy" alt="Selo de garantia incondicional de 7 dias"><h3>Garantia Incondicional</h3><p>Leia, teste e siga o plano. Se dentro de 7 dias você sentir que não valeu, é só pedir o reembolso e devolvemos tudo, sem perguntas.</p><a class="gbtn sm" href="#" data-buy>BAIXAR AGORA</a></div></section>
 
 <section style="padding-top:0"><div class="n"><div class="ctr"><div class="kick">Dúvidas</div><h2>Perguntas frequentes</h2></div>
 <details><summary>Como recebo o material?</summary><p>Depois da compra, você recebe o acesso aos arquivos em PDF.</p></details>
@@ -265,7 +278,7 @@ section:not(.dark)>.n>p,section:not(.dark) .ctr>p{color:#e3d6bf}
 <details><summary>Posso revender ou compartilhar?</summary><p>Não. O material é de uso pessoal e a revenda é proibida.</p></details>
 <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Basta pedir o reembolso.</p></details></div></section>
 
-<section class="fin"><div class="n"><h2>Comece pela próxima situação que te pegar de surpresa.</h2><p style="font-size:18px">Por R$ 27, com garantia de 7 dias.</p><a class="btn" href="#" data-buy>Quero o kit agora</a></div></section>
+<section class="fin"><div class="n"><h2>Comece pela próxima situação que te pegar de surpresa.</h2><p style="font-size:18px">Acesso imediato, com garantia de 7 dias.</p><a class="btn" href="#" data-buy>Quero o kit agora</a></div></section>
 
 <footer><div class="w"><p>Este material é educativo e treina habilidades de comunicação. Não substitui acompanhamento psicológico ou médico. Os resultados variam de pessoa pra pessoa.</p><p>Uso pessoal, proibida a revenda.</p></div></footer>
 <div class="sticky" id="sticky"><a class="btn" href="#" data-buy>Quero o kit agora</a></div>
@@ -286,6 +299,9 @@ var CHECKOUT_URL = "COLE_AQUI_O_LINK_DE_CHECKOUT";
    OFFER_END: data/hora em que o preco de lancamento ACABA DE VERDADE, ex "2026-11-10T23:59:00-03:00".
    Ao fim do prazo o contador some. Vazio = nao mostra nada. Mantenha a promessa: depois da data, suba o preco no checkout. */
 var OFFER_END = "";
+/* INSTALLMENT: texto de parcelamento SO se o checkout realmente oferece, ex "ou 6x de R$ 5,27". Vazio = nao mostra. */
+var INSTALLMENT = "";
+(function(){var e=document.getElementById("inst");if(e)e.textContent=INSTALLMENT})();
 /* ---- NOTIFICACOES DE COMPRA REAIS (so aparecem se houver dados) ----
    REAL_SALES: lista vinda das vendas reais (nome, cidade-UF, quando). Vazio = nenhuma notificacao.
    Ex: [{n:"Carlos de Recife-PE",t:"há 12 minutos"}] */
