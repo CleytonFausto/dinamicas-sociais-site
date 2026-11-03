@@ -136,6 +136,28 @@ footer{background:var(--v3);color:#9b8f80;padding:34px 0;font-size:13px}footer p
 .zoom{position:fixed;inset:0;background:rgba(10,3,6,.94);z-index:60;display:none;align-items:center;justify-content:center;padding:16px;cursor:zoom-out}
 .zoom.on{display:flex}.zoom img{max-width:100%;max-height:100%;border-radius:8px}
 .kitc{display:block;width:100%;height:auto;border-radius:16px;margin:0 auto}
+.cd{display:none;margin:0 auto 22px;max-width:480px;background:#6b0d12;border:1px solid #c0392b;border-radius:14px;padding:14px 18px;text-align:left;color:#fff}
+.cd.on{display:block}.cd b{display:block;font-size:15px}.cd span{font-size:14px;opacity:.9}
+.cd .t{display:inline-block;margin-left:6px;background:rgba(0,0,0,.35);border-radius:6px;padding:2px 8px;font-weight:700;font-variant-numeric:tabular-nums}
+.toast{position:fixed;left:12px;bottom:84px;z-index:40;max-width:320px;background:#fff;color:#1c070f;border-radius:14px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.3);font-size:14px;line-height:1.35;transform:translateY(20px);opacity:0;pointer-events:none;transition:.4s}
+.toast.on{transform:none;opacity:1}.toast small{display:block;color:#6b6b6b;margin-top:2px}
+@media(min-width:761px){.toast{bottom:20px}}
+/* ---- TEMA ESCURO NO ESTILO DA REFERENCIA: fundo vinho, titulos grandes em creme/dourado, caixas tracejadas ---- */
+body{background:#240004;color:#efe4d0}
+section{background:#240004}
+section:not(.dark):not(.fin) h2{color:#FBE7B8;font-size:clamp(32px,6vw,50px)}
+section:not(.dark):not(.fin) .kick{color:var(--gold)}
+section[style*="#fff"]{background:#F6EBD3!important;border:0!important}
+section[style*="#fff"] h2{color:#5a1d0a!important}
+section:not(.dark)>.n>p,section:not(.dark) .ctr>p{color:#e3d6bf}
+.bul li,.step,.faq details,details{background:#FFF8E1!important;color:#2a1a10!important;border:2px dashed #7a1f2b!important}
+.bul li *,.step *,details *{color:inherit}
+.step h3{color:#5a1d0a!important}
+.dark{background:#1a0003}
+.tudo{max-width:760px;margin:30px auto 0;background:#FFF8E1;color:#2a1a10;border:3px dashed #7a1f2b;padding:18px 20px;text-align:center;font-size:18px;line-height:1.7}
+.tudo p{margin:0 0 12px}.tudo p:last-child{margin:0}
+.avisob{max-width:760px;margin:26px auto 0;background:#5a0f12;border:3px dashed #c9a24a;padding:16px 18px;color:#FBE7B8;font-size:17px;text-align:center}
+.for2{max-width:760px;margin:0 auto;text-align:center}.for2 h3{color:#5a1d0a;font-size:24px;margin:10px 0 6px}.for2 p{color:#3b2a20;font-size:15.5px}
 </style></head><body>
 
 <div class="strip">Acesso imediato · Garantia incondicional de 7 dias</div>
@@ -153,6 +175,9 @@ footer{background:var(--v3);color:#9b8f80;padding:34px 0;font-size:13px}footer p
 <div class="stage"><img class="kit" src="kit.jpg" width="1000" height="750" alt="Kit Mais de 100 Dinâmicas Sociais: livro e folhas ilustradas" fetchpriority="high"></div>
 </div></div></header>
 
+<section style="padding:40px 0 10px"><div class="n ctr"><div class="avisob">⚠️ <b>AVISO IMPORTANTE:</b> se você não está disposto a praticar dois minutos por dia e a trocar o que fala por frases que funcionam, NÃO compre este kit.</div>
+<div class="kick" style="margin-top:34px">Tudo que você vai conseguir</div>
+<div class="tudo"><p>🛡️ Responder provocações sem travar e sem agredir</p><p>🔥 Sair de situações constrangedoras com uma frase pronta</p><p>🎯 Saber o que dizer, o que evitar e como treinar em 105 cenas reais</p><p>📅 Seguir um plano de 30 dias, de 5 a 20 minutos por dia</p><p>🧭 Usar no trabalho, nas conversas e no grupo, sem decorar discurso</p><p>🗝️ Receber o acesso na hora, em PDF, no celular ou no computador</p></div></div></section>
 <section><div class="n ctr"><div class="kick">Você conhece essa cena</div><h2>Você sabe o que devia ter dito. Três horas depois.</h2>
 <p style="font-size:18px">Alguém solta uma indireta e você ri sem graça. A conversa morre no "tudo bem". Num grupo, você fica na borda e ninguém te puxa pro meio. À noite, você repassa tudo.</p>
 <p style="font-size:18px"><b>Isso não é defeito de caráter.</b> É falta de repertório e de prática, e os dois se treinam. Este kit entrega o repertório e organiza a prática.</p></div></section>
@@ -219,6 +244,7 @@ footer{background:var(--v3);color:#9b8f80;padding:34px 0;font-size:13px}footer p
 <p>Isso não é terapia e não garante resultado. Os efeitos variam de pessoa pra pessoa e dependem de você praticar.</p></div></section>
 
 <section id="oferta" class="dark"><div class="w"><div class="ctr"><div class="kick">Sua oferta</div><h2>Tudo isso por um pagamento único</h2></div>
+<div class="cd" id="cd"><b>Condição de lançamento termina em:<span class="t" id="cdt"></span></b><span id="cdd"></span></div>
 <div class="offer"><img class="kitc" src="kit-completo.jpg" width="1000" height="714" loading="lazy" alt="Kit completo: guia com 105 dinâmicas e 3 bônus"><div class="kick" style="margin-top:18px">Kit completo</div>
 <h3 style="font-size:26px;color:var(--v1)">Mais de 100 Dinâmicas Sociais</h3>
 <div class="pr"><small>R$</small>27</div><div class="note">pagamento único, sem mensalidade</div>
@@ -252,6 +278,27 @@ var CHECKOUT_URL = "COLE_AQUI_O_LINK_DE_CHECKOUT";
   var s=document.getElementById("sticky"),o=document.getElementById("oferta");
   function chk(){var y=window.scrollY,h=window.innerHeight,r=o.getBoundingClientRect();s.classList.toggle("on",y>500&&!(r.top<h&&r.bottom>0))}
   window.addEventListener("scroll",chk,{passive:true});chk();
+})();
+
+/* ---- URGENCIA REAL (so aparece se voce preencher) ----
+   OFFER_END: data/hora em que o preco de lancamento ACABA DE VERDADE, ex "2026-11-10T23:59:00-03:00".
+   Ao fim do prazo o contador some. Vazio = nao mostra nada. Mantenha a promessa: depois da data, suba o preco no checkout. */
+var OFFER_END = "";
+/* ---- NOTIFICACOES DE COMPRA REAIS (so aparecem se houver dados) ----
+   REAL_SALES: lista vinda das vendas reais (nome, cidade-UF, quando). Vazio = nenhuma notificacao.
+   Ex: [{n:"Carlos de Recife-PE",t:"há 12 minutos"}] */
+var REAL_SALES = [];
+(function(){
+  var cd=document.getElementById("cd");
+  if(OFFER_END){var end=new Date(OFFER_END).getTime();
+    var f=function(x){return (x<10?"0":"")+x};
+    var tick=function(){var d=end-Date.now();if(isNaN(end)||d<=0){cd.classList.remove("on");return}
+      var h=Math.floor(d/36e5),m=Math.floor(d%36e5/6e4),sc=Math.floor(d%6e4/1e3);
+      document.getElementById("cdt").textContent=Math.floor(h/24)+"d "+f(h%24)+":"+f(m)+":"+f(sc);
+      document.getElementById("cdd").textContent="Depois disso o preço sobe.";cd.classList.add("on");setTimeout(tick,1000)};tick()}
+  if(REAL_SALES.length){var t=document.createElement("div");t.className="toast";document.body.appendChild(t);var i=0;
+    var show=function(){var v=REAL_SALES[i++%REAL_SALES.length];t.innerHTML="<b>"+v.n+"</b> comprou o kit<small>"+v.t+"</small>";t.classList.add("on");setTimeout(function(){t.classList.remove("on")},5000)};
+    setTimeout(function(){show();setInterval(show,14000)},6000)}
 })();
 </script><div class="zoom" id="zoom"><img alt=""></div>
 <script>
