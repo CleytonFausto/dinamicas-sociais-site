@@ -24,7 +24,7 @@ h2{font-size:clamp(24px,6.4vw,32px);font-weight:700;margin-bottom:14px}
 .logo i{color:var(--or)}
 .hero h1{font-size:clamp(20px,5.4vw,25px);font-weight:700;margin-bottom:14px}
 .hero .sub{font-size:14.5px;color:var(--mut);display:flex;gap:8px;align-items:flex-start;justify-content:center;text-align:left;max-width:30em;margin:0 auto 20px}
-.frame{border:3px solid var(--bk);border-radius:22px;overflow:hidden;background:var(--bk);box-shadow:6px 6px 0 var(--bk)}
+.frame{border:3px solid var(--bk);border-radius:22px;overflow:hidden;background:var(--bg);box-shadow:6px 6px 0 var(--bk);margin-top:22px}@media(min-width:900px){.frame{margin-top:0}}
 /* BOTAO laranja com seta */
 .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin:22px 0 0;background:var(--or);color:#fff;text-decoration:none;font:800 17px Sora,sans-serif;letter-spacing:.02em;text-transform:uppercase;padding:18px 20px;border:3px solid var(--bk);border-radius:16px;box-shadow:5px 5px 0 var(--bk);transition:transform .1s,box-shadow .1s}
 .btn:active{transform:translate(3px,3px);box-shadow:2px 2px 0 var(--bk)}
@@ -70,13 +70,13 @@ h2{font-size:clamp(24px,6.4vw,32px);font-weight:700;margin-bottom:14px}
 .prod .mm li::before{content:"✓";position:absolute;left:0;top:7px;width:20px;height:20px;border-radius:6px;background:var(--or);font-size:12px;display:grid;place-items:center}
 /* galeria */
 .gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 14px;margin:18px -18px 0;padding-left:18px;padding-right:18px}
-.gal figure{flex:0 0 78%;margin:0;scroll-snap-align:center}
+.gal figure{flex:0 0 78%;max-width:340px;margin:0;scroll-snap-align:center}
 .gal img{border:3px solid var(--bk);border-radius:16px;box-shadow:4px 4px 0 var(--bk);background:#fff;cursor:zoom-in}
 .gal figcaption{font:700 13px Sora;text-transform:uppercase;text-align:center;margin-top:10px}
 .hint{font-size:13px;color:var(--mut);text-align:center}
 /* fases */
 .fase{background:linear-gradient(180deg,#FF5A1A,#C93300);color:#fff;border:3px solid var(--bk);border-radius:24px;padding:16px 16px 22px;box-shadow:6px 6px 0 var(--bk);margin-top:22px}
-.fase .top{background:var(--bk);border-radius:16px;height:150px;position:relative;display:grid;place-items:center;font-size:64px}
+.fase .top{border:2.5px solid var(--bk);border-radius:16px;position:relative;overflow:hidden;background:var(--bk)}.fase .top img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .fase .tag{position:absolute;left:12px;top:12px;background:#fff;color:var(--bk);border-radius:30px;padding:6px 14px;font:800 12.5px Sora}
 .fase h3{font-size:22px;font-weight:700;text-transform:uppercase;text-align:center;margin:16px 0 6px}
 .fase .q{text-align:center;font-style:italic;opacity:.95;margin-bottom:14px}
@@ -90,7 +90,7 @@ h2{font-size:clamp(24px,6.4vw,32px);font-weight:700;margin-bottom:14px}
 .parts h3{font-size:16.5px;font-weight:700;text-transform:uppercase}.parts p{margin:2px 0 0;font-size:14.5px;color:var(--mut)}
 /* bonus */
 .bon{background:var(--bk);color:#fff;border-radius:24px;border:3px solid var(--bk);box-shadow:6px 6px 0 var(--or);padding:18px 18px 22px;margin-top:22px}
-.bon img{border-radius:14px;margin-bottom:16px;width:100%;max-width:330px;margin-left:auto;margin-right:auto}
+.bon img{border-radius:12px;border:2.5px solid #fff;margin-bottom:16px;width:100%;max-width:330px;margin-left:auto;margin-right:auto}
 .bon .n{display:inline-block;background:var(--or);border-radius:30px;padding:5px 14px;font:800 12px Sora;text-transform:uppercase;margin-bottom:10px}
 .bon h3{font-size:20px;font-weight:700;margin-bottom:6px}.bon .q{color:var(--or2);font-style:italic;margin-bottom:12px}
 .bon ul{list-style:none;padding:0;margin:0;display:grid;gap:7px;color:#e7e3d6;font-size:15px}.bon li::before{content:"→ ";color:var(--or)}
@@ -123,16 +123,31 @@ footer{padding:30px 0 100px;text-align:center;font-size:13px;color:var(--mut);bo
 .sticky{position:fixed;left:0;right:0;bottom:0;z-index:30;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:rgba(255,251,225,.96);border-top:2.5px solid var(--bk);transform:translateY(110%);transition:transform .25s}
 .sticky.on{transform:none}.sticky .btn{margin:0;padding:14px}
 .zoom{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;place-items:center;z-index:50;padding:16px}.zoom.on{display:grid}.zoom img{max-height:92vh;border-radius:10px}
-@media(min-width:900px){.w{max-width:620px}.sticky{display:none}}
+/* livro do produto em destaque */
+.bookshow{display:grid;gap:26px;align-items:center}
+.bookshow .cv{justify-self:center;width:min(74%,330px);border:3px solid var(--bk);border-radius:6px 14px 14px 6px;box-shadow:8px 0 0 #efe6c4,13px 0 0 var(--bk),20px 9px 0 var(--bk);transform:rotate(-2deg)}
+.stats{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 0}
+.stats div{background:#fff;border:2.5px solid var(--bk);border-radius:14px;box-shadow:3px 3px 0 var(--bk);padding:8px 14px;font:800 20px/1 Sora;text-align:center}.stats small{display:block;font:700 11px Sora;text-transform:uppercase;color:var(--mut);margin-top:3px}
+@media(min-width:900px){
+.sticky{display:none}.w{max-width:620px}.w.wide{max-width:1060px}
+.hero .w{max-width:1060px;display:grid;grid-template-columns:1fr 1.15fr;gap:38px;align-items:center;text-align:left;padding-top:30px;padding-bottom:20px}
+.hero .logo{margin-left:0}.hero h1{font-size:40px;line-height:1.1}.hero .sub{margin-left:0;justify-content:flex-start;font-size:17px}
+.hero .btn{max-width:420px;font-size:19px;padding:20px}.hero .stats{justify-content:flex-start}
+.steps3,.bons{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps3 .fase,.bons .bon{margin-top:22px}
+.bookshow{grid-template-columns:1fr 1.1fr;gap:56px}.bookshow .cv{width:340px}
+.parts{grid-template-columns:1fr 1fr;column-gap:40px}.gal{display:grid;grid-template-columns:repeat(3,1fr);overflow:visible;margin:22px 0 0;padding:0 0 10px;gap:26px}.gal figure{max-width:none}.hint{display:none}.parts{max-width:900px;margin-left:auto;margin-right:auto}
+.off{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center}.off .offimg img{margin:0}
+}
 </style></head><body>
 
 <!-- HERO -->
 <header class="hero"><div class="w ctr">
-<div class="logo">Mais de 100 <i>Dinâmicas Sociais</i></div>
+<div class="hl"><div class="logo">Mais de 100 <i>Dinâmicas Sociais</i></div>
 <h1>O método pra <span class="or">destravar sua vida social</span> e nunca mais passar vergonha numa conversa.</h1>
 <p class="sub"><span>🟧</span><span>Mesmo que você seja tímido, trave na hora H ou só pense no que devia ter dito horas depois.</span></p>
-<div class="frame"><img src="kit-main4.jpg" width="1000" height="714" alt="E-book Mais de 100 Dinâmicas Sociais e os 3 bônus"></div>
-<a class="btn" href="#oferta" data-buy>Quero o meu kit</a>
+<div class="stats"><div>8<small>fases</small></div><div>105<small>situações</small></div><div>30<small>dias de treino</small></div></div>
+<a class="btn" href="#oferta" data-buy>Quero o meu kit</a></div>
+<div class="frame"><img src="kit-main5.jpg" width="1000" height="714" alt="E-book Mais de 100 Dinâmicas Sociais com páginas ilustradas"></div>
 </div></header>
 
 <div class="marq"><div class="tr">
@@ -174,37 +189,37 @@ footer{padding:30px 0 100px;text-align:center;font-size:13px;color:var(--mut);bo
 </div></section>
 
 <!-- PRODUTO -->
-<section style="padding-top:10px"><div class="w">
+<section style="padding-top:10px"><div class="w wide"><div class="bookshow"><img class="cv" src="p1m.jpg" loading="lazy" alt="Capa do e-book Mais de 100 Dinâmicas Sociais">
 <div class="prod"><div class="t">Mais de 100<br><i>Dinâmicas Sociais</i></div>
 <p class="ctr" style="color:#d9d5c8">Um método em 8 fases pra destravar a sua vida social, com 105 situações reais de consulta e um protocolo de 30 dias pra praticar.</p>
 <ul class="mm"><li>Mesmo que você seja tímido</li><li>Mesmo que trave quando o coração acelera</li><li>Mesmo que ache que "não leva jeito pra conversa"</li></ul>
-<a class="btn" href="#oferta" data-buy style="box-shadow:5px 5px 0 #fff;border-color:#fff">Quero o meu kit</a></div>
+<a class="btn" href="#oferta" data-buy style="box-shadow:5px 5px 0 #fff;border-color:#fff">Quero o meu kit</a></div></div>
 </div></section>
 
 <!-- POR DENTRO -->
-<section style="padding-top:10px" id="dentro"><div class="w ctr">
+<section style="padding-top:10px" id="dentro"><div class="w wide ctr">
 <h2>Veja como é o <span class="or">e-book por dentro</span></h2>
 <p>Método, situações reais e protocolo de treino, tudo fácil de consultar no celular.</p>
 <div class="gal">
-<figure><img src="p1n.jpg" loading="lazy" alt="Capa do e-book"><figcaption>A capa</figcaption></figure>
-<figure><img src="p2n.jpg" loading="lazy" alt="Fase 00: por que você trava"><figcaption>Fase 00: por que você trava</figcaption></figure>
-<figure><img src="p3n.jpg" loading="lazy" alt="As 3 mentiras da sua cabeça"><figcaption>O que a ciência mostra</figcaption></figure>
-<figure><img src="p4n.jpg" loading="lazy" alt="Situação da biblioteca"><figcaption>105 situações, uma por folha</figcaption></figure>
-<figure><img src="p5n.jpg" loading="lazy" alt="Protocolo de 30 dias"><figcaption>Protocolo de 30 dias</figcaption></figure>
-<figure><img src="p6n.jpg" loading="lazy" alt="Estado e presença"><figcaption>Técnica passo a passo</figcaption></figure></div>
+<figure><img src="p1m.jpg" loading="lazy" alt="Capa do e-book"><figcaption>A capa</figcaption></figure>
+<figure><img src="p2m.jpg" loading="lazy" alt="Fase 00: por que você trava"><figcaption>Fase 00: por que você trava</figcaption></figure>
+<figure><img src="p3m.jpg" loading="lazy" alt="As 3 mentiras da sua cabeça"><figcaption>O que a ciência mostra</figcaption></figure>
+<figure><img src="p4m.jpg" loading="lazy" alt="Situação da biblioteca"><figcaption>105 situações, uma por folha</figcaption></figure>
+<figure><img src="p5m.jpg" loading="lazy" alt="Protocolo de 30 dias"><figcaption>Protocolo de 30 dias</figcaption></figure>
+<figure><img src="p6m.jpg" loading="lazy" alt="Estado e presença"><figcaption>Técnica passo a passo</figcaption></figure></div>
 <p class="hint">Arraste pro lado e toque pra ampliar</p>
 </div></section>
 
 <!-- COMO FUNCIONA -->
-<section style="padding-top:10px"><div class="w">
+<section style="padding-top:10px"><div class="w wide">
 <div class="ctr"><h2>Na prática, <span class="or">como funciona</span> o kit?</h2>
 <p>Foi feito pra ser simples. Qualquer um consegue aplicar, em 3 etapas que se completam.</p></div>
-<div class="fase"><div class="top"><span class="tag">ETAPA 01</span>🧠</div><h3>Entenda o método</h3><p class="q">"Quem entende o ciclo, sai dele."</p>
+<div class="steps3"><div class="fase"><div class="top"><span class="tag">ETAPA 01</span><img src="ill-f00.jpg" loading="lazy" alt=""></div><h3>Entenda o método</h3><p class="q">"Quem entende o ciclo, sai dele."</p>
 <ul><li>Descubra por que você trava e o que mantém a trava</li><li>Aprenda a acalmar o corpo e a tirar a atenção de você</li><li>Veja a técnica de cada fase, passo a passo</li></ul></div>
-<div class="fase"><div class="top"><span class="tag">ETAPA 02</span>🔎</div><h3>Consulte a sua situação</h3><p class="q">"Achou a cena, achou o caminho."</p>
+<div class="fase"><div class="top"><span class="tag">ETAPA 02</span><img src="ill-bib.jpg" loading="lazy" alt=""></div><h3>Consulte a sua situação</h3><p class="q">"Achou a cena, achou o caminho."</p>
 <ul><li>Abra a biblioteca na situação que você vai viver</li><li>Entenda o que está por trás e o que fazer</li><li>Compare o que funciona com o que te entrega</li></ul></div>
-<div class="fase"><div class="top"><span class="tag">ETAPA 03</span>🎯</div><h3>Pratique por 30 dias</h3><p class="q">"Um desafio por dia, do leve ao difícil."</p>
-<ul><li>Siga o protocolo, com versão leve pros dias difíceis</li><li>Anote o nervoso antes e depois e veja a evolução</li><li>Ganhe naturalidade onde importa: no mundo real</li></ul></div>
+<div class="fase"><div class="top"><span class="tag">ETAPA 03</span><img src="ill-prot.jpg" loading="lazy" alt=""></div><h3>Pratique por 30 dias</h3><p class="q">"Um desafio por dia, do leve ao difícil."</p>
+<ul><li>Siga o protocolo, com versão leve pros dias difíceis</li><li>Anote o nervoso antes e depois e veja a evolução</li><li>Ganhe naturalidade onde importa: no mundo real</li></ul></div></div>
 </div></section>
 
 <!-- SPOILER: PARTES -->
@@ -225,25 +240,25 @@ footer{padding:30px 0 100px;text-align:center;font-size:13px;color:var(--mut);bo
 </div></section>
 
 <!-- BONUS -->
-<section style="padding-top:10px"><div class="w">
+<section style="padding-top:10px"><div class="w wide">
 <div class="ctr"><p style="font:700 14px Sora;text-transform:uppercase;margin-bottom:6px">O e-book sozinho já resolve…</p><h2>Mas você merece <span class="or">ainda mais</span></h2>
 <p>Junto com o e-book, você leva 3 bônus que aceleram tudo.</p></div>
-<div class="bon"><img src="bonus1n.jpg" width="700" height="990" loading="lazy" alt="Bônus 1"><span class="n">Bônus 01</span><h3>Diagnóstico Social: descubra onde você trava</h3><p class="q">"Treine o ponto certo, não o errado"</p>
+<div class="bons"><div class="bon"><img src="bonus1m.jpg" width="700" height="990" loading="lazy" alt="Bônus 1"><span class="n">Bônus 01</span><h3>Diagnóstico Social: descubra onde você trava</h3><p class="q">"Treine o ponto certo, não o errado"</p>
 <ul><li>Teste de 10 minutos em 6 áreas da vida social</li><li>Plano de 4 semanas pela sua área mais fraca</li><li>Ficha pra ver a sua evolução</li></ul></div>
-<div class="bon"><img src="bonus2n.jpg" width="700" height="990" loading="lazy" alt="Bônus 2"><span class="n">Bônus 02</span><h3>Mapa da Conversa: abrir, sustentar e fechar</h3><p class="q">"Um caminho claro pra qualquer conversa"</p>
+<div class="bon"><img src="bonus2m.jpg" width="700" height="990" loading="lazy" alt="Bônus 2"><span class="n">Bônus 02</span><h3>Mapa da Conversa: abrir, sustentar e fechar</h3><p class="q">"Um caminho claro pra qualquer conversa"</p>
 <ul><li>Roteiros pra trabalho, academia, festa e encontros</li><li>Os 3 fios pra nunca ficar sem assunto</li><li>Banco de perguntas abertas e ficha de treino</li></ul></div>
-<div class="bon"><img src="bonus3n.jpg" width="700" height="990" loading="lazy" alt="Bônus 3"><span class="n">Bônus 03</span><h3>Protocolo do Branco: o que fazer quando trava</h3><p class="q">"Saia do branco com calma e naturalidade"</p>
-<ul><li>3 passos: respira, assume, retoma</li><li>Saídas rápidas pras situações mais comuns</li><li>Cartão de bolso pra consultar na hora</li></ul></div>
+<div class="bon"><img src="bonus3m.jpg" width="700" height="990" loading="lazy" alt="Bônus 3"><span class="n">Bônus 03</span><h3>Protocolo do Branco: o que fazer quando trava</h3><p class="q">"Saia do branco com calma e naturalidade"</p>
+<ul><li>3 passos: respira, assume, retoma</li><li>Saídas rápidas pras situações mais comuns</li><li>Cartão de bolso pra consultar na hora</li></ul></div></div>
 </div></section>
 
 <!-- OFERTA -->
-<section id="oferta" style="padding-top:10px"><div class="w">
-<div class="off"><img src="kit-completo4.jpg" loading="lazy" alt="Kit completo: e-book e 3 bônus" width="1000" height="714">
+<section id="oferta" style="padding-top:10px"><div class="w wide">
+<div class="off"><div class="offimg"><img src="kit-completo5.jpg" loading="lazy" alt="Kit completo: e-book e 3 bônus" width="1000" height="714"></div><div class="offtxt">
 <ul><li>E-book Mais de 100 Dinâmicas Sociais (método em 8 fases)</li><li>Biblioteca com 105 situações reais</li><li>Protocolo de 30 dias</li><li>Bônus 01: Diagnóstico Social</li><li>Bônus 02: Mapa da Conversa</li><li>Bônus 03: Protocolo do Branco</li><li>Acesso imediato, no celular ou no computador</li></ul>
 <p class="cond">Tenha acesso a tudo isso por uma condição especial:</p>
 <div class="price"><div class="de">De <s>R$ 267,00</s> por:</div><div class="px"><small>6x</small>R$ 5,27</div><div class="av">ou R$ 27 à vista</div></div>
 <a class="btn" href="#" data-buy>Quero meu kit com desconto</a>
-<p class="note">Acesso imediato. 7 dias de garantia.</p></div>
+<p class="note">Acesso imediato. 7 dias de garantia.</p></div></div>
 </div></section>
 
 <!-- GARANTIA -->
