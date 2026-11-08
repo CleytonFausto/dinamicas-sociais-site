@@ -290,7 +290,7 @@ footer{padding:30px 0 100px;text-align:center;font-size:13px;color:var(--mut);bo
 /* Link de checkout: troque pela URL real da Wiven. Enquanto vazio, os botoes levam ate a oferta. */
 var CHECKOUT_URL = "https://checkout.wiven.com.br/checkout/cmw0wwtfi087301pql9w25fa5?offer=KHQS3YY";
 (function(){
-  document.querySelectorAll("[data-buy]").forEach(function(a){ a.href = CHECKOUT_URL || "#oferta"; });
+  document.querySelectorAll("#oferta [data-buy]").forEach(function(a){ a.href = CHECKOUT_URL || "#oferta"; });
   var s=document.getElementById("sticky"),o=document.getElementById("oferta");
   function chk(){var r=o.getBoundingClientRect();s.classList.toggle("on",scrollY>600&&!(r.top<innerHeight&&r.bottom>0))}
   addEventListener("scroll",chk,{passive:true});chk();
